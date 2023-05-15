@@ -1,26 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
+import styled from 'styled-components';
+import TodoHeader from './components/Header/TodoHeader';
+import TodoList from './components/Section/TodoList';
+
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <StyledDiv>
+            <header>
+                <TodoHeader />
+            </header>
+            <TodoList />
+        </StyledDiv>
+    );
 }
 
 export default App;
+
+// Style Component
+const StyledDiv = styled.div`
+    width: 40rem;
+    height: 40rem;
+    margin: auto;
+    background-color: orange;
+`;
