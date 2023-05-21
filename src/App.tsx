@@ -1,27 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
-import styled from 'styled-components';
-import TodoHeader from './components/Header/TodoHeader';
-import TodoList from './components/Section/TodoList';
+type Filter = string[];
 
+const filters = ['all', 'active', 'completed'];
 function App() {
-    return (
-        <StyledDiv>
-            <header>
-                <TodoHeader />
-            </header>
-            <TodoList />
-        </StyledDiv>
-    );
+    const [filter, setFilter] = useState<Filter>();
+    return <div></div>;
 }
 
 export default App;
-
-// Style Component
-const StyledDiv = styled.div`
-    width: 40rem;
-    height: 40rem;
-    margin: auto;
-    background-color: orange;
-`;
